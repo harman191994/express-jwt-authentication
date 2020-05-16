@@ -3,6 +3,7 @@ const app = express();
 const dotenv = require('dotenv')
 const mongoose = require('mongoose');
 const path = require('path');
+const expressLayouts = require('express-ejs-layouts');
 //Import Routes
 const authRoute = require('./routes/auth.js');
 const postRoute = require('./routes/posts.js');
@@ -21,7 +22,7 @@ mongoose.connect(process.env.DB_CONNECT, { useUnifiedTopology: true, useNewUrlPa
 
 //Middleware
 app.use(express.json());
-
+app.use(expressLayouts)
 //Ejs engine
 app.set('views', path.join(__dirname, 'views'))
 app.set('view engine', 'ejs');

@@ -1,1 +1,11 @@
 <h1>Welcome to EJS home page</h1>
+<h3>Please find list of users below:</h3>
+<ul>
+    <% for(var user of user){%>
+    <% if(user.name=== 'Harman') { %>
+    <li><%= user.name %> - Active User</li>
+    <% } else { %>
+    <li><%= user.name %> - Inactive User</li>
+    <% } %>
+    <% } %>
+</ul>

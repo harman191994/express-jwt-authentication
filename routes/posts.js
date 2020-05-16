@@ -7,6 +7,6 @@ router.get('/posts', verify, async (req, res) => {
 }) 
 
 router.get('/home', (req, res) => {
-    res.render('home')
+    res.render('home', { user : [{name: "Harman"},{name: "Jot"},{name:"Kaur"}]})
 })
 module.exports = router;
