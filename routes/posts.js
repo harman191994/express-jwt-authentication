@@ -6,4 +6,7 @@ router.get('/posts', verify, async (req, res) => {
     res.send(req.user);
 }) 
 
+router.get('/home', (req, res) => {
+    res.render('home')
+})
 module.exports = router;
